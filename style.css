@@ -3,4 +3,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+h1 {
+    text-decoration: underline dashed;
+    text-align: center;
 }

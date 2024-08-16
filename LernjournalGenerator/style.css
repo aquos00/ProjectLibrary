@@ -6,9 +6,6 @@ main{
     align-items: center;
     align-content: center;
 }
-.dropdown {
-    width: fit-content;
-}
 .dropdown > .dropbtn {
     width: 100%;
 }
@@ -55,7 +52,12 @@ button{
 textarea{
     resize: none;
     border: black solid 2px;
+    border-radius: 8px;
     background-color: lightgray;
+}
+textarea:focus {
+    outline: none !important;
+    border: white solid 2px;
 }
 textarea::spelling-error{
     color: red;
@@ -68,12 +70,14 @@ textarea::spelling-error{
 #output {
     background-color: lightgray;
     border: solid 2px black;
+    border-radius: 8px;
     padding: 1%;
     max-width: 700px;
-    word-break: keep-all;
+    word-break: break-all;
 }
 #text {
-    font-size: 16px;
+    font-size: 23.5px;
+    font-weight: bold;
     width: 700px;
     height: 350px;
     padding: 1%;

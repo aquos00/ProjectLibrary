@@ -15,7 +15,6 @@ function clicked() {
     var data = document.getElementById("data");
     var i = 0;
     Array.from(text.value).forEach(char => {
-        console.log(char);
         if (char == ".") {
             i++;
         }
@@ -25,3 +24,9 @@ function clicked() {
     output.innerHTML = (outputText);
     data.innerHTML = "Anzahl Sätze: " + i+ " | "+ "Anzahl Zeichen: "+ textValue.length;
 }
+var datum = (new Date().toISOString().slice(0, 10).split('-').reverse().join('.'));
+var output = document.getElementById("output");
+var data = document.getElementById("data");
+data.innerHTML = "Anzahl Sätze: 0 | Anzahl Zeichen: 0";
+var outputText = ("#### " + getWeekDay() + " / " + datum + "<br><br>");
+output.innerHTML = outputText;

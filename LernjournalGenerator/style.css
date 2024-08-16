@@ -1,0 +1,80 @@
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.dropdown {
+    width: fit-content;
+}
+.dropdown > .dropbtn {
+    width: 100%;
+}
+#dropdowncont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body > h1, h1 > a {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+}
+h1 > a {
+    color: rgb(73, 73, 73);
+    border: solid 2px black;
+    border-radius: 8px;
+    padding: 0.5%;
+    background-color: lightgray;
+    transition: all 0.5s ease-in-out;
+}
+h1 > a:hover {
+    color: gray;
+}
+body{
+    background-color: darkgray;
+}
+main h1 {
+    font-size: 40px;
+    text-decoration: underline dashed;
+}
+h2 {
+    text-decoration: underline;
+}
+main > * {
+    margin: 0.5%;
+}
+button{
+    width: 25%;
+    border: black solid 2px;
+    background-color: lightgray;
+}
+textarea{
+    resize: none;
+    border: black solid 2px;
+    background-color: lightgray;
+}
+textarea::spelling-error{
+    color: red;
+    text-decoration: underline wavy;
+}
+#title {
+    width: 250px;
+    
+}
+#output {
+    background-color: lightgray;
+    border: solid 2px black;
+    padding: 1%;
+    max-width: 700px;
+    word-break: keep-all;
+}
+#text {
+    font-size: 16px;
+    width: 700px;
+    height: 350px;
+    padding: 1%;
+}

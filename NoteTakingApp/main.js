@@ -46,10 +46,11 @@ function saveNotes() {
 function loadNotes() {
     let savedNotes = JSON.parse(localStorage.getItem("notes"));
     if (savedNotes && savedNotes.length !== 0) {
+        num = 0;
         savedNotes.forEach(note => {
-            addOldNote(note.id, note.text);
+            addOldNote(num, note.text);
+            num++;
         });
-        num = savedNotes.length;
     }
     else {
         addNote();

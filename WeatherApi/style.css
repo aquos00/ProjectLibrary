@@ -1,0 +1,54 @@
+#dropdowncont, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    font-size: 40px;
+    text-decoration: underline dashed;
+}
+canvas#myChart {
+    height: auto !important;
+    width: 75% !important;
+}
+.hide {
+    display: none !important;
+}
+#buttoncont {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#buttoncont > button {
+    color: white;
+    border: black solid 2px;
+    border-radius: 8px;
+    padding: 2.5%;
+    background-color: #777777;
+    transition: all 0.5s ease-in-out;
+    margin: 1%;
+}
+#buttoncont > button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+#myWeatherData {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    border: black solid 2px;
+    border-radius: 8px;
+    background-color: lightgray;
+} 
+#myWeather {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}

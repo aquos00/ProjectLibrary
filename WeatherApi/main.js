@@ -1,4 +1,4 @@
-const API_URL = 'https://api.open-meteo.com/v1/forecast?latitude=47.0002&longitude=8.0143&current=temperature_2m,rain,snowfall,cloud_cover&hourly=temperature_2m,rain,snowfall,cloud_cover&timezone=Europe%2FBerlin';
+const API_URL = 'https://api.open-meteo.com/v1/forecast?latitude=47.0002&longitude=8.0143&current=temperature_2m,is_day,rain,snowfall,weather_code,cloud_cover&hourly=temperature_2m,rain,snowfall,cloud_cover&timezone=Europe%2FBerlin';
 
 async function fetchWeatherData(num) {
     try {
@@ -20,6 +20,8 @@ function displayCurrentWeather(data) {
     let myWeather = document.getElementById("myWeather");
     let myWeatherData = document.getElementById("myWeatherData");
     let myChart = document.getElementById("myChart");
+    let imgCont = document.getElementById("imgCont");
+    let imgUrl = "unknown.png";
     myWeather.classList.toggle("hide");
     (myChart.classList.contains("hide")) ? "" : myChart.classList.toggle("hide");
     myWeatherData.innerHTML =
@@ -44,6 +46,24 @@ function displayCurrentWeather(data) {
     else {
         conclusion.innerText = "I think your Bike needs a break today"
     }
+    if (data.weather_code < 10) {
+        if (data.is_day == 1) {
+            imgUrl = "icons/" + "0" + data.weather_code.toString() + "d.png"
+        }
+        else {
+            imgUrl = "icons/" + "0" + data.weather_code.toString() + "n.png"
+        }
+    }
+    else {
+        if (data.is_day == 1) {
+            imgUrl = "icons/" + data.weather_code.toString() + "d.png"
+        }
+        else {
+            imgUrl = "icons/" + data.weather_code.toString() + "n.png"
+        }
+    }
+    imgCont.innerHTML = `<img src="${imgUrl}" alt="Icon">`;
+    console.log(`<img src="${imgUrl}" alt="Icon">`)
 }
 function displayFutureWeather(data) {
     const xValues = data.time.map(formatTime);

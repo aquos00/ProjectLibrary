@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="..\shared\dropdown.css" />
+    <link rel="stylesheet" href="../shared/dropdown.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="..\shared\icon.png" />
+    <link rel="icon" type="image/png" href="../shared/icon.png" />
     <script defer src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>Weather Forecast</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="dropdowncont">
-      <div class="dropdown">
-        <button class="dropbtn">Menu</button>
-        <div class="dropdown-content">
-          <a href="..\">Home</a>
-          <a href="..\LernjournalGenerator">Lernjournal Generator</a>
-          <a href="..\NoteTakingApp">Note Taking App</a>
-          <a href="">Weather Forecast</a>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="../">Home</a>
+                <a href="../LernjournalGenerator">Lernjournal Generator</a>
+                <a href="../NoteTakingApp">Note Taking App</a>
+                <a href="">Weather Forecast</a>
+            </div>
         </div>
-      </div>
     </div>
     <h1>Weather Forecast</h1>
     <div id="buttoncont">
-      <button onclick="fetchWeatherData(1)">Today</button>
-      <button onclick="fetchWeatherData(2)">7 Day Forecast</button>
+        <button onclick="fetchWeatherData(1)">Today</button>
+        <button onclick="fetchWeatherData(2)">7 Day Forecast</button>
     </div>
-    <canvas
-      id="myChart"
-      style="width: 100%; max-width: 1500px"
-      class="hide"
-    ></canvas>
+    <canvas id="myChart" class="hide" style="width: 100%; max-width: 1500px;"></canvas>
     <div id="myWeather" class="hide">
         <div id="imgCont">
             <img src="icons/unknown.png" alt="unknown">
         </div>
         <div id="myWeatherData">
-            <h3>Temperatur: °C</h3>
+            <h3>Temperature: °C</h3>
             <h3>Rain: mm</h3>
             <h3>Time: </h3>
             <h3>Date: </h3>
             <h3>Snow: cm</h3>
             <h3>Cloud coverage: %</h3>
         </div>
-        <h1 id="conclusion">go for a ride!</h1>
+        <h1 id="conclusion">Go for a ride!</h1>
     </div>
-  </body>
+</body>
+
 </html>

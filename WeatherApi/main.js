@@ -1,4 +1,4 @@
-const API_URL = 'https://api.open-meteo.com/v1/forecast?latitude=47.0002&longitude=8.0143&current=temperature_2m,is_day,rain,snowfall,weather_code,cloud_cover&hourly=temperature_2m,rain,snowfall,cloud_cover&timezone=Europe%2FBerlin';
+const API_URL = 'https://api.open-meteo.com/v1/forecast?latitude=47.0002&longitude=8.0143&current=temperature_2m,is_day,rain,snowfall,weather_code,cloud_cover&hourly=temperature_2m,rain,snowfall,cloud_cover&timezone=Europe%2FBerlin&models=best_match';
 
 async function fetchWeatherData(num) {
     try {
@@ -96,7 +96,7 @@ function displayFutureWeather(data) {
                 label: 'Cloud coverage (%)',
                 data: data.cloud_cover,
                 borderColor: 'rgb(209,134,00)',
-                tension: 0.1
+                tension: 0.75
             }
             ]
         },

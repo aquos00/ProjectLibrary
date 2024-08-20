@@ -11,6 +11,10 @@ h1 {
 canvas#myChart {
     height: auto !important;
     width: 75% !important;
+    background-color: lightgray;
+    border: black solid 2px;
+    border-radius: 8px;
+    margin-top: 1%;
 }
 .hide {
     display: none !important;
@@ -51,4 +55,9 @@ canvas#myChart {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+
+    border: black solid 2px;
+    border-radius: 8px;
+    padding: 1% 2.5%;
+    margin: 1%;
 }
